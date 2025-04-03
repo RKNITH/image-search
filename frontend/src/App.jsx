@@ -10,7 +10,7 @@ const App = () => {
   const fetchImages = async () => {
     if (!query) return;
     try {
-      const response = await axios.get(`http://localhost:5000/api/images?q=${query}`);
+      const response = await axios.get(`https://image-search-seven-indol.vercel.app/api/images?q=${query}`);
       setImages(response.data.results);
     } catch (error) {
       console.error("Error fetching images", error);
