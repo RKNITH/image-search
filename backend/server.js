@@ -10,6 +10,11 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the Image Search API");
+}
+)
+
 // Route to fetch images from Unsplash
 app.get("/api/images", async (req, res) => {
     const query = req.query.q;
